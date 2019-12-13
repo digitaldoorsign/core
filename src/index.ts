@@ -3,5 +3,5 @@ export function test() {
 }
 
 export function test2() {
-	console.log("Hello World! Again!");
+	console.log("Hello World! Again! With Patch!");
 }
