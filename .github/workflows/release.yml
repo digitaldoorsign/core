@@ -37,9 +37,9 @@ jobs:
       - run: npm ci
 
       - uses: actions/download-artifact@v1
-          with:
-            name: build-artifact
-            path: lib
+        with:
+          name: build-artifact
+          path: lib
 
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v2
