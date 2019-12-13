@@ -13,10 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Semantic Release
-      uses: cycjimmy/semantic-release-action@v2
-      with:
-        branch: master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NPM_TOKEN: ${{ secrets.npm_token }}
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          branch: master
+        env:
+          GITHUB_TOKEN: ${{ secrets.sr_github_token }}
+          NPM_TOKEN: ${{ secrets.sr_npm_token }}
