@@ -1,4 +1,4 @@
-name: CI
+name: Release
 
 on: 
   push:
@@ -6,12 +6,14 @@ on:
       - master
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
 
     steps:
     - name: Semantic Release
       uses: cycjimmy/semantic-release-action@v2
+      with:
+        branch: master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.npm_token }}
