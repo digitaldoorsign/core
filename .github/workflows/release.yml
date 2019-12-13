@@ -30,12 +30,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          name: build-artifact
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
-      - run: npm ci
 
       - uses: actions/download-artifact@v1
         with:
