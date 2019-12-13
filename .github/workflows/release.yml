@@ -20,6 +20,9 @@ jobs:
         uses: cycjimmy/semantic-release-action@v2
         with:
           branch: master
+        extra_plugins: |
+          @semantic-release/git
+          @semantic-release/changelog@3.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.sr_github_token }}
           NPM_TOKEN: ${{ secrets.sr_npm_token }}
