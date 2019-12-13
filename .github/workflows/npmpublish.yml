@@ -29,11 +29,11 @@ jobs:
           name: build-artifact
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - uses: actions/download-artifact@1
+      - run: npm ci
+      - uses: actions/download-artifact@v1
         with:
           name: build-artifact
           path: lib
-      - run: npm ci
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
