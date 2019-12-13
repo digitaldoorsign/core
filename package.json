@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/digitaldoorsign/core.git"
+    "url": "https://github.com/digitaldoorsign/core.git"
   },
   "keywords": [
     "digitaldoorsign"
