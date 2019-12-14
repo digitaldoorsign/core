@@ -22,7 +22,10 @@
   },
   "homepage": "https://github.com/digitaldoorsign/core#readme",
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "cz-conventional-changelog": "^3.0.2",
+    "husky": "^3.1.0",
     "typescript": "^3.7.3"
   },
   "config": {
@@ -32,5 +35,15 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
