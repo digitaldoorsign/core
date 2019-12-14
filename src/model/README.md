@@ -39,3 +39,5 @@ export class ExampleModel implements IExampleModel {
 	}
 }
 ```
+## Testing
+Models should each have a test written for them that verifies that the class constructor is copying the properties over correctly.
